@@ -3,13 +3,13 @@
 int main()
 {
     int a[100],n,i,key,low=0,high,mid,flag=0;
-
+    printf("enter the no of element");
     scanf("%d",&n);
-
+    printf("Enter element :\n");
     for(i=0;i<n;i++)
     scanf("%d",&a[i]);
 
-    printf("Enter element:\n");
+    printf("Enter element to find:\n");
     scanf("%d",&key);
 
     high=n-1;
