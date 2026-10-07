@@ -1,4 +1,4 @@
-//WAP TO SORT AN ARRAY USING QUICK SORT(Hoare Partition)
+//WAP TO SORT AN ARRAY USING QUICK SORT(Lomno Partition)
 #include<stdio.h>
 void swap(int *a, int *b)
 {
@@ -19,21 +19,21 @@ void quicksort(int *arr, int low, int high)
 }
 
 int partition(int *arr ,int low,int high){
-    int mid=(low+high)/2;
-    int pivot = arr[mid];
-    int i=low,j=high;
-    while(i<=j){
+    int i= low-1,j=low;
+    int pivot = arr[high];
+
+    while(j<high){
         while (arr[i] < pivot) {
-            i++;
+            ++i;
         }
         while (arr[j] > pivot) {
-            j--;
+            j++;
         }
 
         if (i <= j) {
             swap(&arr[i], &arr[j]);
-            i++;
-            j--;
+            ++i;
+            j++;
         
     }
     }
